@@ -2,9 +2,9 @@
 
 namespace PropaySystems\Utilities;
 
+use PropaySystems\Utilities\Commands\UtilitiesCommand;
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
-use PropaySystems\Utilities\Commands\UtilitiesCommand;
 
 class UtilitiesServiceProvider extends PackageServiceProvider
 {
