@@ -1,12 +1,12 @@
 <?php
 
-namespace VendorName\Skeleton\Commands;
+namespace PropaySystems\Utilities\Commands;
 
 use Illuminate\Console\Command;
 
-class SkeletonCommand extends Command
+class UtilitiesCommand extends Command
 {
-    public $signature = 'skeleton';
+    public $signature = 'utilities';
 
     public $description = 'My command';
 
