@@ -29,7 +29,7 @@ enum Color
     /*
      * Get the color id
      */
-    public function id(): string
+    public function id(): int
     {
         return match ($this) {
             self::PRIMARY => 1,
