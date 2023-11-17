@@ -9,7 +9,8 @@ class IdNumberHelper
 {
     /**
      * @param $dateOfBirth 19821208
-     * @param int $male 0 or 1
+     * @param  int  $male 0 or 1
+     *
      * @throws \Exception
      */
     public static function generateIdNumber($dateOfBirth, int $male = 0): string
@@ -39,9 +40,6 @@ class IdNumberHelper
         return $total;
     }
 
-    /**
-     * @return string
-     */
     public static function generateFakeId(): string
     {
         $minYear = 20;
@@ -91,9 +89,6 @@ class IdNumberHelper
         return Str::limit($tempId.$lastDigit, 13);
     }
 
-    /**
-     * @return string
-     */
     public static function generateDateOfBirth(): string
     {
         return str_pad((string) mt_rand(60, 99), 2, '0', STR_PAD_LEFT).str_pad(mt_rand(1, 12), 2, '0', STR_PAD_LEFT).str_pad(
@@ -104,19 +99,11 @@ class IdNumberHelper
         );
     }
 
-    /**
-     * @param $idNumber
-     * @return int
-     */
     public static function getGenderCode($idNumber): int
     {
         return (substr($idNumber, 6, 4) < 5000) ? 'female' : 'male';
     }
 
-    /**
-     * @param $idNumber
-     * @return string
-     */
     public static function getBirthDate($idNumber): string
     {
         $default_century = 19;
@@ -135,10 +122,6 @@ class IdNumberHelper
         return $year.'-'.$month.'-'.$day;
     }
 
-    /**
-     * @param $idNumber
-     * @return string
-     */
     public static function getAgeFromIdNumber($idNumber): string
     {
         $birthDay = self::getBirthDate($idNumber);
@@ -216,10 +199,6 @@ class IdNumberHelper
         return false;
     }
 
-    /**
-     * @param $input
-     * @return int
-     */
     private static function generateLuhnDigit($input): int
     {
         $total = 0;
