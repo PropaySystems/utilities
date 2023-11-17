@@ -8,17 +8,7 @@ trait SaveToUpper
     {
         parent::setAttribute($key, $value);
 
-        $exclude = [
-            'email',
-            'import_note',
-            'email',
-            'email_secondary',
-            'password',
-            'remember_token',
-            'avatar',
-        ];
-
-        if (is_string($value) && ! in_array($key, $exclude)) {
+        if (is_string($value) && ! in_array($key, config('utilities.save_to_upper.exclusions'))) {
             $this->attributes[$key] = trim(strtoupper($value));
         }
     }

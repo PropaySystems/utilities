@@ -6,10 +6,17 @@ use Illuminate\Support\Facades\DB;
 
 trait TriggerHelper
 {
-    public static function switchDatabaseTrigger($state = true, $table = null, $trigger = null, $connection = 'sqlsrv')
+    /**
+     * @param $state
+     * @param $table
+     * @param $trigger
+     * @param $connection
+     * @return void
+     */
+    public static function switchDatabaseTrigger($enable = true, $table = null, $trigger = null, string $connection = 'sqlsrv'): void
     {
-        if (config('custom.sync.enable_audit_triggers')) {
-            $triggerState = (bool) $state ? 'ENABLE' : 'DISABLE';
+        if (config('utilities.trigger.enable_trigger')) {
+            $triggerState = (bool) $enable ? 'ENABLE' : 'DISABLE';
             DB::connection($connection)->statement("{$triggerState} TRIGGER {$table}.{$trigger} ON {$table}");
         }
     }
