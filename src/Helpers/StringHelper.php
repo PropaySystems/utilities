@@ -12,16 +12,12 @@ class StringHelper
      * --------------------------------------------------------------------------
      * Get the first letter of every word and capitalize them
      * ex: "ettienne louw" will become "EL"
-     *
-     * @param $str
-     * @param bool $upperCase
-     * @return string
      */
     public static function initials($str, bool $upperCase = true): string
     {
         $results = '';
         foreach (explode(' ', self::clean($str)) as $word) {
-            if (!empty($word[0])) {
+            if (! empty($word[0])) {
                 if ($upperCase) {
                     $results .= Str::upper($word[0]);
                 } else {
@@ -38,9 +34,6 @@ class StringHelper
      * Capitalize first characters
      * --------------------------------------------------------------------------
      * Capitalize first letter of a word
-     *
-     * @param $string
-     * @return string
      */
     public static function capitaliseFirstChar($string): string
     {
@@ -52,21 +45,16 @@ class StringHelper
      * Clean a string
      * --------------------------------------------------------------------------
      * Removed all white spaces and special characters
-     *
-     * @param string $string
-     * @param bool $toLower
-     * @param bool $removeSpecialChars
-     * @return string
      */
     public static function clean(string $string, bool $toLower = false, bool $removeSpecialChars = true): string
     {
         return Str::of($string)
             ->trim()
             ->squish()
-            ->when($toLower, function($string) {
+            ->when($toLower, function ($string) {
                 return Str::lower($string);
             })
-            ->when($removeSpecialChars, function($string) {
+            ->when($removeSpecialChars, function ($string) {
                 return preg_replace('/[^A-Za-z0-9\s\-]/', '', $string);
             });
     }
@@ -118,12 +106,6 @@ class StringHelper
      * Mask a string
      * --------------------------------------------------------------------------
      * Mask certain amount of characters in a string
-     *
-     * @param $string
-     * @param string $maskingCharacter
-     * @param int $padLeft
-     * @param int $padRight
-     * @return string
      */
     public static function mask($string, string $maskingCharacter = '*', int $padLeft = 4, int $padRight = 4): string
     {
@@ -141,9 +123,6 @@ class StringHelper
      * Remove special characters
      * --------------------------------------------------------------------------
      * Remove special character NOT VERY SPECIAL characters
-     *
-     * @param $string
-     * @return string
      */
     public static function removeSpecialCharacters($string): string
     {
@@ -167,7 +146,6 @@ class StringHelper
      * --------------------------------------------------------------------------
      * Transform db column name to human-readable
      *
-     * @param $string_array
      * @return string[]
      */
     public static function dbColumnHumanReadable($string_array): array
@@ -183,7 +161,6 @@ class StringHelper
      * --------------------------------------------------------------------------
      * Transform db column name to human-readable
      *
-     * @param $string_array
      * @return string[]
      */
     public static function dbColumnRelation($string_array): array
@@ -198,8 +175,6 @@ class StringHelper
      *  Return list of special characters
      *  --------------------------------------------------------------------------
      *  This will return a list of special characters
-     *
-     * @return array
      */
     public static function specialCharacters(): array
     {

@@ -9,10 +9,6 @@ class FileHelper
      * Format bytes to relevant metric
      * --------------------------------------------------------------------------
      * Format bytes to better human-readable format
-     *
-     * @param $bytes
-     * @param  int  $precision
-     * @return string
      */
     public static function formatBytes($bytes, int $precision = 2): string
     {

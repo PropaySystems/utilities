@@ -8,10 +8,6 @@ trait TriggerHelper
 {
     /**
      * @param $state
-     * @param $table
-     * @param $trigger
-     * @param $connection
-     * @return void
      */
     public static function switchDatabaseTrigger($enable = true, $table = null, $trigger = null, string $connection = 'sqlsrv'): void
     {

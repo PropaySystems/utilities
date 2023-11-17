@@ -8,8 +8,6 @@ class DatabaseHelper
 {
     /**
      * Reset table
-     *
-     * @param $table
      */
     public static function resetTable($table)
     {
@@ -22,7 +20,6 @@ class DatabaseHelper
     /**
      * Map collection to array
      *
-     * @param $array
      * @return array
      */
     public static function mapCollectionToArray($array)

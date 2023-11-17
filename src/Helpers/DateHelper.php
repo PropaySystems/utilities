@@ -15,13 +15,11 @@ class DateHelper
      * --------------------------------------------------------------------------
      * Mask certain amount of characters in a string
      *
-     * @param $number
      * @param  false  $abbreviation
-     * @return string
      */
     public static function getMonthName($number, bool $abbreviation = false): string
     {
-        return trans_choice('utilities::dates.' . (int) Str::lower($number), ($abbreviation) ? 1 : 2);
+        return trans_choice('utilities::dates.'.(int) Str::lower($number), ($abbreviation) ? 1 : 2);
     }
 
     /**
@@ -29,8 +27,6 @@ class DateHelper
      * Fiscal Year
      * --------------------------------------------------------------------------
      * This will give you the current financial year
-     *
-     * @return int|string
      */
     public static function getFiscalYear(): int|string
     {
@@ -47,7 +43,6 @@ class DateHelper
      * --------------------------------------------------------------------------
      * TODO: Update what this actually does
      *
-     * @param $time
      * @return string
      */
     public static function getTime($time)
