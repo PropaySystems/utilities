@@ -148,9 +148,6 @@ class StringHelper
      *  Make a DB column name human readable
      *  --------------------------------------------------------------------------
      *  Transform db column name to human-readable
-     *
-     * @param $string_array
-     * @return Collection
      */
     public static function dbColumnHumanReadable($string_array): Collection
     {
@@ -164,9 +161,6 @@ class StringHelper
      *  Make a DB column name human readable
      *  --------------------------------------------------------------------------
      *  Transform db column name to human-readable
-     *
-     * @param $string_array
-     * @return Collection
      */
     public static function dbColumnRelation($string_array): Collection
     {

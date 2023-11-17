@@ -18,7 +18,6 @@ it('can format bytes to GB human-readable format', function () {
     expect($value)->toBe('4.66 GB');
 });
 
-
 it('can format bytes to TB human-readable format', function () {
     $value = \PropaySystems\Utilities\Helpers\FileHelper::formatBytes('10000000000000');
 

@@ -99,10 +99,6 @@ class IdNumberHelper
         );
     }
 
-    /**
-     * @param $idNumber
-     * @return string
-     */
     public static function getGenderCode($idNumber): string
     {
         return (substr($idNumber, 6, 4) < 5000) ? 'female' : 'male';
@@ -126,10 +122,6 @@ class IdNumberHelper
         return $year.'-'.$month.'-'.$day;
     }
 
-    /**
-     * @param $idNumber
-     * @return int
-     */
     public static function getAgeFromIdNumber($idNumber): int
     {
         $birthDay = self::getBirthDate($idNumber);

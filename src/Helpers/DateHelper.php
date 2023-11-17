@@ -14,10 +14,6 @@ class DateHelper
      *  Mask a string
      *  --------------------------------------------------------------------------
      *  Mask certain amount of characters in a string
-     *
-     * @param $number
-     * @param bool $abbreviation
-     * @return string
      */
     public static function getMonthName($number, bool $abbreviation = false): string
     {
