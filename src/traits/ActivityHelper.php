@@ -1,9 +1,10 @@
 <?php
 
-namespace App\Traits;
+namespace PropaySystems\Utilities\traits;
 
 use Illuminate\Support\Facades\Auth;
 use Spatie\Activitylog\Contracts\Activity;
+use function App\Traits\activity;
 
 trait ActivityHelper
 {

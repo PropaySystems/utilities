@@ -1,8 +1,7 @@
 <?php
 
-namespace App\Helpers;
+namespace PropaySystems\Utilities\Helpers;
 
-use Illuminate\Support\Facades\Storage;
 use Spatie\MediaLibrary\MediaCollections\Models\Media;
 use Symfony\Component\HttpFoundation\StreamedResponse;
 

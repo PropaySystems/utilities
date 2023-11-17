@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Helpers;
+namespace PropaySystems\Utilities\Helpers;
 
 abstract class Component extends \Illuminate\View\Component
 {

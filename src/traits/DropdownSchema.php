@@ -1,8 +1,7 @@
 <?php
 
-namespace App\Traits;
+namespace PropaySystems\Utilities\traits;
 
-use App\Models\Other\Status;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 

@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Enums;
+namespace PropaySystems\Utilities\Enums;
 
 enum HttpCode: int
 {

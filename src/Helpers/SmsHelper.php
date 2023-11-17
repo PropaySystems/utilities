@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Helpers;
+namespace PropaySystems\Utilities\Helpers;
 
 class SmsHelper
 {

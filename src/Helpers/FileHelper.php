@@ -1,25 +1,29 @@
 <?php
 
-namespace App\Helpers;
+namespace PropaySystems\Utilities\Helpers;
 
 class FileHelper
 {
     /**
-     * @param $size
+     * --------------------------------------------------------------------------
+     * Format bytes to relevant metric
+     * --------------------------------------------------------------------------
+     * Format bytes to better human-readable format
+     *
+     * @param $bytes
      * @param  int  $precision
      * @return string
      */
-    public static function formatFilesize($size, $precision = 2)
+    public static function formatBytes($bytes, int $precision = 2): string
     {
-        $units = ['B', 'KB', 'MB', 'GB', 'TB', 'PB', 'EB', 'ZB', 'YB'];
-        $step = 1024;
-        $i = 0;
+        $units = ['B', 'KB', 'MB', 'GB', 'TB'];
 
-        while (($size / $step) > 0.9) {
-            $size /= $step;
-            $i++;
-        }
+        $bytes = max($bytes, 0);
+        $pow = floor(($bytes ? log($bytes) : 0) / log(1024));
+        $pow = min($pow, count($units) - 1);
 
-        return round($size, $precision).' '.$units[$i];
+        $bytes /= pow(1024, $pow);
+
+        return round($bytes, $precision).' '.$units[$pow];
     }
 }

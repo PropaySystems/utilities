@@ -18,8 +18,7 @@ class UtilitiesServiceProvider extends PackageServiceProvider
         $package
             ->name('utilities')
             ->hasConfigFile()
-            ->hasViews()
-            ->hasMigration('create_utilities_table')
+            ->hasTranslations()
             ->hasCommand(UtilitiesCommand::class);
     }
 }

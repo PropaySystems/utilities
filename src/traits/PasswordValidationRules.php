@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Traits;
+namespace PropaySystems\Utilities\traits;
 
 use Illuminate\Validation\Rules\Password as PasswordValidation;
 

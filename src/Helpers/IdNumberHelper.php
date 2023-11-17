@@ -1,8 +1,7 @@
 <?php
 
-namespace App\Helpers;
+namespace PropaySystems\Utilities\Helpers;
 
-use App\Models\Other\Gender;
 use Carbon\Carbon;
 use Illuminate\Support\Str;
 
@@ -10,14 +9,15 @@ class IdNumberHelper
 {
     /**
      * @param $dateOfBirth 19821208
-     * @param  int  $male 0 or 1
+     * @param int $male 0 or 1
      * @return string
+     * @throws \Exception
      */
     public static function generateIdNumber($dateOfBirth, int $male): string
     {
-        $gender = self::getRandom(5) + ($male ? 5 : 0);
+        $gender = (int) NumberHelper::randomInt(1,5) + ($male ? 5 : 0);
         $citizen = 0;
-        $random = self::getRandom(1000);
+        $random = (int) NumberHelper::randomInt(1,1000);
 
         if ($random < 10) {
             $random = '00'.$random;
@@ -43,7 +43,7 @@ class IdNumberHelper
     /**
      * @return string
      */
-    public static function generateFakeId()
+    public static function generateFakeId(): string
     {
         $minYear = 20;
         $maxYear = 99;
@@ -93,15 +93,6 @@ class IdNumberHelper
     }
 
     /**
-     * @param $range
-     * @return int
-     */
-    public static function getRandom($range): int
-    {
-        return mt_rand(1, $range);
-    }
-
-    /**
      * @return string
      */
     public static function generateDateOfBirth(): string
@@ -120,7 +111,7 @@ class IdNumberHelper
      */
     public static function getGenderCode($idNumber): int
     {
-        return (substr($idNumber, 6, 4) < 5000) ? Gender::FEMALE : Gender::MALE;
+        return (substr($idNumber, 6, 4) < 5000) ? 'female' : 'male';
     }
 
     /**

@@ -1,19 +1,16 @@
-# A set of helper utilities and traits
+# Propay Utilities
 
 [![Latest Version on Packagist](https://img.shields.io/packagist/v/propaysystems/utilities.svg?style=flat-square)](https://packagist.org/packages/propaysystems/utilities)
 [![GitHub Tests Action Status](https://img.shields.io/github/actions/workflow/status/propaysystems/utilities/run-tests.yml?branch=main&label=tests&style=flat-square)](https://github.com/propaysystems/utilities/actions?query=workflow%3Arun-tests+branch%3Amain)
 [![GitHub Code Style Action Status](https://img.shields.io/github/actions/workflow/status/propaysystems/utilities/fix-php-code-style-issues.yml?branch=main&label=code%20style&style=flat-square)](https://github.com/propaysystems/utilities/actions?query=workflow%3A"Fix+PHP+code+style+issues"+branch%3Amain)
 [![Total Downloads](https://img.shields.io/packagist/dt/propaysystems/utilities.svg?style=flat-square)](https://packagist.org/packages/propaysystems/utilities)
 
-This is where your description should go. Limit it to a paragraph or two. Consider adding a small example.
+A set of helper utilities and traits to commuan functions we use everyday and across all our systems.
 
-## Support us
+## Requirements
 
-[<img src="https://github-ads.s3.eu-central-1.amazonaws.com/utilities.jpg?t=1" width="419px" />](https://spatie.be/github-ad-click/utilities)
-
-We invest a lot of resources into creating [best in class open source packages](https://spatie.be/open-source). You can support us by [buying one of our paid products](https://spatie.be/open-source/support-us).
-
-We highly appreciate you sending us a postcard from your hometown, mentioning which of our package(s) you are using. You'll find our address on [our contact page](https://spatie.be/about-us). We publish all received postcards on [our virtual postcard wall](https://spatie.be/open-source/postcards).
+PHP 8.1+  
+Laravel 9+  
 
 ## Installation
 
@@ -23,30 +20,10 @@ You can install the package via composer:
 composer require propaysystems/utilities
 ```
 
-You can publish and run the migrations with:
-
-```bash
-php artisan vendor:publish --tag="utilities-migrations"
-php artisan migrate
-```
-
 You can publish the config file with:
 
 ```bash
 php artisan vendor:publish --tag="utilities-config"
-```
-
-This is the contents of the published config file:
-
-```php
-return [
-];
-```
-
-Optionally, you can publish the views using
-
-```bash
-php artisan vendor:publish --tag="utilities-views"
 ```
 
 ## Usage

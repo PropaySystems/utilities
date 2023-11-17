@@ -1,16 +1,16 @@
 <?php
 
-namespace App\Traits;
+namespace PropaySystems\Utilities\Helpers;
 
 use Carbon\Carbon;
 
-trait TimeHelper
+class TimeHelper
 {
     /**
      * @param $time
      * @return string
      */
-    public function getTime($time)
+    public static function getTime($time)
     {
         // Remove any non-digit characters from the input string
         $minutes = preg_replace('/[^0-9]/', '', $time);

@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Traits;
+namespace PropaySystems\Utilities\traits;
 
 use Illuminate\Support\Facades\DB;
 

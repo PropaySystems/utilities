@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Traits;
+namespace PropaySystems\Utilities\traits;
 
 trait SaveToUpper
 {
@@ -10,6 +10,12 @@ trait SaveToUpper
 
         $exclude = [
             'email',
+            'import_note',
+            'email',
+            'email_secondary',
+            'password',
+            'remember_token',
+            'avatar',
         ];
 
         if (is_string($value) && ! in_array($key, $exclude)) {

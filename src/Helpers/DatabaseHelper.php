@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Helpers;
+namespace PropaySystems\Utilities\Helpers;
 
 use Illuminate\Support\Facades\DB;
 
@@ -20,7 +20,7 @@ class DatabaseHelper
     }
 
     /**
-     * MAp collection to array
+     * Map collection to array
      *
      * @param $array
      * @return array
