@@ -31,16 +31,10 @@ class NumberHelper
         ];
     }
 
-    /**
-     * @param int $number
-     * @param int $precision
-     * @param $divisors
-     * @return int|string
-     */
     public static function numberFormat(int $number, int $precision = 2, $divisors = null): int|string
     {
         // Setup default $divisors if not provided
-        if (!$divisors) {
+        if (! $divisors) {
             $divisors = [
                 pow(1000, 0) => '', // 1000^0 == 1
                 pow(1000, 1) => 'K', // Thousand
