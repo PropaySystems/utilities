@@ -26,6 +26,6 @@ return [
     9 => 'Sep|September',
     10 => 'Okt|Oktober',
     11 => 'Nov|November',
-    12 => 'Dec|December'
+    12 => 'Dec|December',
 
 ];

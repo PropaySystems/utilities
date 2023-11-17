@@ -15,13 +15,10 @@ class TranslationHelper
      *  --------------------------------------------------------------------------
      *  Get the current translation from the database table programatically
      *
-     * @param string $value
-     * @param string $fileName
-     * @param string $character
      * @return Application|array|\Illuminate\Foundation\Application|string|Translator|null
      */
     public static function translate(string $value, string $fileName, string $character = '_')
     {
-        return Lang::has(config('utilities.translation_helper.path') . DIRECTORY_SEPARATOR .$fileName.' . '.Str::slug($value, $character)) ? __(config('utilities.translation_helper.path') . DIRECTORY_SEPARATOR . $fileName.'.'.Str::slug($value, $character)) : $value;
+        return Lang::has(config('utilities.translation_helper.path').DIRECTORY_SEPARATOR.$fileName.' . '.Str::slug($value, $character)) ? __(config('utilities.translation_helper.path').DIRECTORY_SEPARATOR.$fileName.'.'.Str::slug($value, $character)) : $value;
     }
 }

@@ -5,10 +5,6 @@ namespace PropaySystems\Utilities\Helpers;
 class NumberHelper
 {
     /**
-     * @param int $min
-     * @param int $max
-     * @param bool $appendTime
-     * @return int
      * @throws \Exception
      */
     public static function randomInt(int $min = 1, int $max = 100000, bool $appendTime = false): int
@@ -22,13 +18,7 @@ class NumberHelper
         return (int) $number;
     }
 
-    /**
-     * @param int $last
-     * @param int $current
-     * @param bool $round
-     * @return array
-     */
-    public static function getPercentageDifference(int $last, int $current, bool $round= false): array
+    public static function getPercentageDifference(int $last, int $current, bool $round = false): array
     {
         $diff = $current - $last;
         $diff = abs($diff);
@@ -42,10 +32,7 @@ class NumberHelper
     }
 
     /**
-     * @param  int  $number
-     * @param  int  $precision
      * @param  null  $divisors
-     * @return string
      */
     public static function numberFormat(int $number, int $precision = 2, $divisors = null): string
     {

@@ -30,8 +30,7 @@ enum Months
 
     public function number(): string
     {
-        return match($this)
-        {
+        return match ($this) {
             self::JANUARY => '01',
             self::FEBRUARY => '02',
             self::MARCH => '03',
@@ -49,8 +48,7 @@ enum Months
 
     public function abbreviation(): string
     {
-        return match($this)
-        {
+        return match ($this) {
             self::JANUARY => 'Jan',
             self::FEBRUARY => 'Feb',
             self::MARCH => 'Mar',
@@ -65,5 +63,4 @@ enum Months
             self::DECEMBER => 'Dec',
         };
     }
-
 }

@@ -8,9 +8,6 @@ trait PasswordStrength
 {
     public float $passwordStrength = 0;
 
-    /**
-     * @return void
-     */
     public function updateProgress(): void
     {
         $zxcvbn = new Zxcvbn();

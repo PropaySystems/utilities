@@ -11,9 +11,6 @@ class RouteHelper
      *  Check current route
      *  --------------------------------------------------------------------------
      *  Check if it is the current route
-     *
-     * @param  array  $strings
-     * @return bool
      */
     public static function currentRouteContains(array $strings): bool
     {

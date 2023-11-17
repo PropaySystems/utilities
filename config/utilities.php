@@ -3,7 +3,6 @@
 // config for PropaySystems/Utilities
 return [
 
-
     'translation_helper' => [
         'path' => env('TRANSLATION_HELPER_PATH', 'db'),
     ],
@@ -17,11 +16,11 @@ return [
             'password',
             'remember_token',
             'avatar',
-        ]
+        ],
     ],
 
     'trigger' => [
-        'enable_trigger' => env('ENABLE_TRIGGER', false)
+        'enable_trigger' => env('ENABLE_TRIGGER', false),
     ],
 
 ];

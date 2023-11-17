@@ -31,8 +31,7 @@ enum Color
      */
     public function id(): string
     {
-        return match($this)
-        {
+        return match ($this) {
             self::PRIMARY => 1,
             self::GRAY => 2,
             self::BLUE => 3,
@@ -52,8 +51,7 @@ enum Color
      */
     public function hex(): string
     {
-        return match($this)
-        {
+        return match ($this) {
             self::PRIMARY => '#004899',
             self::GRAY => '#6b7280',
             self::BLUE => '#3b82f6',
