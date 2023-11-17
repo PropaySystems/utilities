@@ -179,11 +179,9 @@ class StringHelper
 
     /**
      * --------------------------------------------------------------------------
-     * Mask a string
+     * Make a DB column name human readable
      * --------------------------------------------------------------------------
-     * Mask certain amount of characters in a string
-     *
-     * Transform db column name to relation
+     * Transform db column name to human-readable
      *
      * @param $string_array
      * @return string[]

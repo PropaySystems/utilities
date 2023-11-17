@@ -27,7 +27,7 @@ class NumberHelper
      * @param  int  $current
      * @return array
      */
-    public function getPercentageDifference(int $last, int $current): array
+    public static function getPercentageDifference(int $last, int $current): array
     {
         $diff = $current - $last;
         $diff = abs($diff);
@@ -46,7 +46,7 @@ class NumberHelper
      * @param  null  $divisors
      * @return string
      */
-    public function numberFormat(int $number, int $precision = 2, $divisors = null): string
+    public static function numberFormat(int $number, int $precision = 2, $divisors = null): string
     {
         // Setup default $divisors if not provided
         if (! isset($divisors)) {
