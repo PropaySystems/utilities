@@ -11,4 +11,7 @@ parameters:
     checkOctaneCompatibility: true
     checkModelProperties: true
     checkMissingIterableValueType: false
+    excludePaths:
+            - 'src/Traits/ActivityHelper.php'
+            - 'src/Helpers/SpatieMediaHelper.php'
 

@@ -1,6 +1,6 @@
 <?php
 
-namespace PropaySystems\Utilities\traits;
+namespace PropaySystems\Utilities\Traits;
 
 trait SaveToUpper
 {

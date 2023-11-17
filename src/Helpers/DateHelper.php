@@ -9,13 +9,15 @@ use PropaySystems\Utilities\Enums\Months;
 class DateHelper
 {
     /**
-     * TODO: Must rework this function to use enums
-     * --------------------------------------------------------------------------
-     * Mask a string
-     * --------------------------------------------------------------------------
-     * Mask certain amount of characters in a string
+     *  TODO: Must rework this function to use enums
+     *  --------------------------------------------------------------------------
+     *  Mask a string
+     *  --------------------------------------------------------------------------
+     *  Mask certain amount of characters in a string
      *
-     * @param  false  $abbreviation
+     * @param $number
+     * @param bool $abbreviation
+     * @return string
      */
     public static function getMonthName($number, bool $abbreviation = false): string
     {

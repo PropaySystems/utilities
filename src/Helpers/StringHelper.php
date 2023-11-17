@@ -2,7 +2,9 @@
 
 namespace PropaySystems\Utilities\Helpers;
 
+use Illuminate\Support\Collection;
 use Illuminate\Support\Str;
+use Illuminate\Support\Stringable;
 
 class StringHelper
 {
@@ -51,10 +53,10 @@ class StringHelper
         return Str::of($string)
             ->trim()
             ->squish()
-            ->when($toLower, function ($string) {
-                return Str::lower($string);
+            ->when($toLower, function (Stringable $string) {
+                return $string->lower();
             })
-            ->when($removeSpecialChars, function ($string) {
+            ->when($removeSpecialChars, function (Stringable $string) {
                 return preg_replace('/[^A-Za-z0-9\s\-]/', '', $string);
             });
     }
@@ -126,6 +128,7 @@ class StringHelper
      */
     public static function removeSpecialCharacters($string): string
     {
+        $message = '';
         foreach (self::specialCharacters() as $key => $value) {
             $message = str_replace($key, $value, $string);
         }
@@ -141,14 +144,15 @@ class StringHelper
     }
 
     /**
-     * --------------------------------------------------------------------------
-     * Make a DB column name human readable
-     * --------------------------------------------------------------------------
-     * Transform db column name to human-readable
+     *  --------------------------------------------------------------------------
+     *  Make a DB column name human readable
+     *  --------------------------------------------------------------------------
+     *  Transform db column name to human-readable
      *
-     * @return string[]
+     * @param $string_array
+     * @return Collection
      */
-    public static function dbColumnHumanReadable($string_array): array
+    public static function dbColumnHumanReadable($string_array): Collection
     {
         return collect($string_array)->mapWithKeys(function ($item) {
             return [$item => self::capitaliseFirstChar(str_replace('_', ' ', $item))];
@@ -156,14 +160,15 @@ class StringHelper
     }
 
     /**
-     * --------------------------------------------------------------------------
-     * Make a DB column name human readable
-     * --------------------------------------------------------------------------
-     * Transform db column name to human-readable
+     *  --------------------------------------------------------------------------
+     *  Make a DB column name human readable
+     *  --------------------------------------------------------------------------
+     *  Transform db column name to human-readable
      *
-     * @return string[]
+     * @param $string_array
+     * @return Collection
      */
-    public static function dbColumnRelation($string_array): array
+    public static function dbColumnRelation($string_array): Collection
     {
         return collect($string_array)->mapWithKeys(function ($item) {
             return [$item => str_replace(' ', '', lcfirst(self::capitaliseFirstChar(str_replace('_', ' ', str_replace('_id', '', $item)))))];

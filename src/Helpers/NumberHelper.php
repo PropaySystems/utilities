@@ -32,12 +32,15 @@ class NumberHelper
     }
 
     /**
-     * @param  null  $divisors
+     * @param int $number
+     * @param int $precision
+     * @param $divisors
+     * @return int|string
      */
-    public static function numberFormat(int $number, int $precision = 2, $divisors = null): string
+    public static function numberFormat(int $number, int $precision = 2, $divisors = null): int|string
     {
         // Setup default $divisors if not provided
-        if (! isset($divisors)) {
+        if (!$divisors) {
             $divisors = [
                 pow(1000, 0) => '', // 1000^0 == 1
                 pow(1000, 1) => 'K', // Thousand
@@ -51,6 +54,8 @@ class NumberHelper
 
         // Loop through each $divisor and find the
         // lowest amount that matches
+        $divisor = 1000;
+        $shorthand = 'B';
         foreach ($divisors as $divisor => $shorthand) {
             if (abs($number) < ($divisor * 1000)) {
                 // We found a match!

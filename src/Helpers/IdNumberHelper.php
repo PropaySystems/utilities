@@ -106,9 +106,9 @@ class IdNumberHelper
 
     /**
      * @param $idNumber
-     * @return int
+     * @return string
      */
-    public static function getGenderCode($idNumber): int
+    public static function getGenderCode($idNumber): string
     {
         return (substr($idNumber, 6, 4) < 5000) ? 'female' : 'male';
     }
@@ -137,16 +137,16 @@ class IdNumberHelper
 
     /**
      * @param $idNumber
-     * @return string
+     * @return int
      */
-    public static function getAgeFromIdNumber($idNumber): string
+    public static function getAgeFromIdNumber($idNumber): int
     {
         $birthDay = self::getBirthDate($idNumber);
 
         $currentYear = Carbon::now()->format('Y');
         $birthYear = explode('-', $birthDay)[0];
 
-        return $currentYear - $birthYear;
+        return (int) $currentYear - (int) $birthYear;
     }
 
     public static function validateIdNumber($attribute, $value, $parameters): bool

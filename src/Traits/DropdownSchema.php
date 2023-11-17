@@ -1,6 +1,6 @@
 <?php
 
-namespace PropaySystems\Utilities\traits;
+namespace PropaySystems\Utilities\Traits;
 
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
