@@ -1,11 +1,10 @@
 <?php
 
 it('can generate a fake id number from date of birth', function () {
-    $value = \PropaySystems\Utilities\Helpers\IdNumberHelper::generateIdNumber('19950604', rand(0,1));
+    $value = \PropaySystems\Utilities\Helpers\IdNumberHelper::generateIdNumber('19950604', rand(0, 1));
 
     expect($value)->toHaveLength(13);
 })->skip('Need to see why it is failing');
-
 
 it('can generate a fake id number', function () {
     $value = \PropaySystems\Utilities\Helpers\IdNumberHelper::generateFakeId();
