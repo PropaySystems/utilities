@@ -5,7 +5,7 @@
 [![GitHub Code Style Action Status](https://img.shields.io/github/actions/workflow/status/propaysystems/utilities/fix-php-code-style-issues.yml?branch=main&label=code%20style&style=flat-square)](https://github.com/propaysystems/utilities/actions?query=workflow%3A"Fix+PHP+code+style+issues"+branch%3Amain)
 [![Total Downloads](https://img.shields.io/packagist/dt/propaysystems/utilities.svg?style=flat-square)](https://packagist.org/packages/propaysystems/utilities)
 
-A set of helper utilities and traits to commuan functions we use everyday and across all our systems.
+A set of helper utilities and traits to common functions we use everyday and across all our systems.
 
 ## Requirements
 
@@ -241,9 +241,13 @@ $this->switchDatabaseTrigger($enable = true, $table = null, $trigger = null, str
 
 
 ## Testing
-
+Run pest testing
 ```bash
 composer test
+```
+Run phpstan code analysis
+```bash
+composer analyse
 ```
 
 ## Changelog

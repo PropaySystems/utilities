@@ -40,6 +40,9 @@ class IdNumberHelper
         return $total;
     }
 
+    /**
+     * @return string
+     */
     public static function generateFakeId(): string
     {
         $minYear = 20;
@@ -89,6 +92,9 @@ class IdNumberHelper
         return Str::limit($tempId.$lastDigit, 13);
     }
 
+    /**
+     * @return string
+     */
     public static function generateDateOfBirth(): string
     {
         return str_pad((string) mt_rand(60, 99), 2, '0', STR_PAD_LEFT).str_pad(mt_rand(1, 12), 2, '0', STR_PAD_LEFT).str_pad(
@@ -99,11 +105,19 @@ class IdNumberHelper
         );
     }
 
+    /**
+     * @param $idNumber
+     * @return string
+     */
     public static function getGenderCode($idNumber): string
     {
         return (substr($idNumber, 6, 4) < 5000) ? 'female' : 'male';
     }
 
+    /**
+     * @param $idNumber
+     * @return string
+     */
     public static function getBirthDate($idNumber): string
     {
         $default_century = 19;
@@ -122,6 +136,10 @@ class IdNumberHelper
         return $year.'-'.$month.'-'.$day;
     }
 
+    /**
+     * @param $idNumber
+     * @return int
+     */
     public static function getAgeFromIdNumber($idNumber): int
     {
         $birthDay = self::getBirthDate($idNumber);
@@ -132,6 +150,12 @@ class IdNumberHelper
         return (int) $currentYear - (int) $birthYear;
     }
 
+    /**
+     * @param $attribute
+     * @param $value
+     * @param $parameters
+     * @return bool
+     */
     public static function validateIdNumber($attribute, $value, $parameters): bool
     {
         /*

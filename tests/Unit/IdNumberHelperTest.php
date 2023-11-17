@@ -12,6 +12,12 @@ it('can generate a fake id number', function () {
     expect($value)->toHaveLength(13);
 });
 
+it('can generate date of birth', function () {
+    $value = \PropaySystems\Utilities\Helpers\IdNumberHelper::generateDateOfBirth();
+
+    expect($value)->toHaveLength(13);
+})->skip('Must figure this one out later');
+
 it('can can get birthday from id number', function () {
     $value = \PropaySystems\Utilities\Helpers\IdNumberHelper::getBirthDate('9808076222089');
 
