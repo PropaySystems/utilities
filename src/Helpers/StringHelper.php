@@ -19,18 +19,18 @@ class StringHelper
      */
     public static function initials($str, bool $upperCase = true): string
     {
-        $ret = '';
-        foreach (explode(' ', $str) as $word) {
+        $results = '';
+        foreach (explode(' ', self::clean($str)) as $word) {
             if (!empty($word[0])) {
                 if ($upperCase) {
-                    $ret .= Str::upper($word[0]);
+                    $results .= Str::upper($word[0]);
                 } else {
-                    $ret .= Str::lower($word[0]);
+                    $results .= Str::lower($word[0]);
                 }
             }
         }
 
-        return self::clean($ret);
+        return $results;
     }
 
     /**
@@ -44,7 +44,7 @@ class StringHelper
      */
     public static function capitaliseFirstChar($string): string
     {
-        return Str::ucfirst(Str::lower($string));
+        return Str::of($string)->squish()->lower()->ucfirst();
     }
 
     /**
@@ -53,22 +53,22 @@ class StringHelper
      * --------------------------------------------------------------------------
      * Removed all white spaces and special characters
      *
-     * @param $string
-     * @param string $delimiter
+     * @param string $string
      * @param bool $toLower
      * @param bool $removeSpecialChars
      * @return string
      */
-    public static function clean($string, string $delimiter = '-', bool $toLower = false, bool $removeSpecialChars = true): string
+    public static function clean(string $string, bool $toLower = false, bool $removeSpecialChars = true): string
     {
         return Str::of($string)
-            ->replace(' ', $delimiter)
+            ->trim()
+            ->squish()
             ->when($toLower, function($string) {
                 return Str::lower($string);
-            })->when($removeSpecialChars, function($string) {
-                return preg_replace('/[^A-Za-z0-9\-]/', '', $string);
             })
-            ->trim();
+            ->when($removeSpecialChars, function($string) {
+                return preg_replace('/[^A-Za-z0-9\s\-]/', '', $string);
+            });
     }
 
     /**
@@ -201,7 +201,7 @@ class StringHelper
      *
      * @return array
      */
-    private static function specialCharacters(): array
+    public static function specialCharacters(): array
     {
         return [
             'Á' => 'A', 'È' => 'E', 'É' => 'E', 'Ê' => 'E', 'Ë' => 'E', 'ö' => 'o',

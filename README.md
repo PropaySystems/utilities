@@ -26,6 +26,18 @@ You can publish the config file with:
 php artisan vendor:publish --tag="utilities-config"
 ```
 
+## How to contribute to this package
+
+Feel free to submit a pull request with your changes new features you might have. Please try not to add features that 
+is already in laravel helpers etc, but if you extend a laravel helper with more/better features please do so.
+
+### Steps
+1) Clone Repository.
+2) Create your new branch.
+3) Do your changes / Add your new feature.
+4) Write unit test for it.
+5) Add / Update description of your function to the readme.md 
+
 ## Features
 
 ## Helpers

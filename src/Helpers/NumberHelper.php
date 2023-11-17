@@ -8,10 +8,10 @@ class NumberHelper
      * @param int $min
      * @param int $max
      * @param bool $appendTime
-     * @return string
+     * @return int
      * @throws \Exception
      */
-    public static function randomInt(int $min = 1, int $max = 100000, bool $appendTime = false): string
+    public static function randomInt(int $min = 1, int $max = 100000, bool $appendTime = false): int
     {
         $number = random_int($min, $max).time();
 
@@ -19,15 +19,16 @@ class NumberHelper
             $number.time();
         }
 
-        return $number;
+        return (int) $number;
     }
 
     /**
-     * @param  int  $last
-     * @param  int  $current
+     * @param int $last
+     * @param int $current
+     * @param bool $round
      * @return array
      */
-    public static function getPercentageDifference(int $last, int $current): array
+    public static function getPercentageDifference(int $last, int $current, bool $round= false): array
     {
         $diff = $current - $last;
         $diff = abs($diff);
@@ -36,7 +37,7 @@ class NumberHelper
 
         return [
             'direction' => $diff > 0 ? '+' : '-',
-            'percentage' => $percentChange,
+            'percentage' => ($round) ? round($percentChange) : $percentChange,
         ];
     }
 

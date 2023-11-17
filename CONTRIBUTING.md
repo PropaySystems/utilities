@@ -2,7 +2,7 @@
 
 ## Before you start
 
-Please, make sure you have taken a look on [our documentation](https://docs.propay.co.za/).
+Please, make sure you have taken a look on [our documentation](https://packages.propay.co.za/).
 
 If there is a problem with one of ours components? The best way to reach us is to
 open a new issue, we just ask you to search if your problem was discussed before
