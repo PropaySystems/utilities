@@ -21,7 +21,7 @@ git clone git@github.com:PropaySystems/utilities.git
 cd utilities
 
 composer install
-yarn install
+npm install
 ```
 
 To run the project test make sure you have installed the chromium-browser and run:
@@ -31,7 +31,7 @@ composer test
 ```
 
 Now you can work on the project. We're using a code standard to format our code
-so before send your PR make sure that you run ` composer phpcs `.
+so before send your PR make sure that you run ` composer analyse `.
 
 ## Work on a local project with the project source
 
