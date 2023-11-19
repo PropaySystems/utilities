@@ -1,3 +1,5 @@
+<img src="https://d324x4ew3y6tnn.cloudfront.net/packages/banners/propaysystems-utilities.png" alt="Propay Systems">
+
 # Propay Utilities
 
 [![Latest Version on Packagist](https://img.shields.io/packagist/v/propaysystems/utilities.svg?style=flat-square)](https://packagist.org/packages/propaysystems/utilities)
