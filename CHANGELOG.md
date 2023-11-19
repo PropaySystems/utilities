@@ -2,6 +2,10 @@
 
 All notable changes to `utilities` will be documented in this file.
 
+## v1.0.3 - 2023-11-19
+
+Support multiple laravel versions
+
 ## v1.0.2 - 2023-11-19
 
 Support for laravel 10
