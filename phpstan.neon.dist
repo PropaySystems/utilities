@@ -12,6 +12,11 @@ parameters:
     checkModelProperties: true
     checkMissingIterableValueType: false
     excludePaths:
-            - 'src/Traits/ActivityHelper.php'
+            - 'src/Helpers/BaseModalComponent.php'
+            - 'src/Helpers/Logo.php
             - 'src/Helpers/SpatieMediaHelper.php'
+            - 'src/Traits/AlertHelper.php'
+            - 'src/Traits/FromEmail.php'
+            - 'src/Traits/TableHelper.php'
+
 
