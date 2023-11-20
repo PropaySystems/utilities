@@ -5,7 +5,6 @@ namespace PropaySystems\Utilities\Traits;
 trait TableHelper
 {
     /**
-     * @param $data
      * @return void
      */
     public function handleRecords($data)

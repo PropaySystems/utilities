@@ -9,11 +9,8 @@ trait AlertHelper
     use Actions;
 
     /**
-     * @param $title
      * @param  null  $text
-     * @param  string  $type
      * @param  string  $iconColor
-     * @return void
      */
     public function alert($title, $text = null, string $type = 'success', $iconColor = 'text-green-500'): void
     {
@@ -25,9 +22,6 @@ trait AlertHelper
         ]);
     }
 
-    /**
-     * @return void
-     */
     public function alertCreated(): void
     {
         $this->notification()->success(
@@ -36,9 +30,6 @@ trait AlertHelper
         );
     }
 
-    /**
-     * @return void
-     */
     public function alertUpdated(): void
     {
         $this->notification()->success(
@@ -55,9 +46,6 @@ trait AlertHelper
         );
     }
 
-    /**
-     * @return void
-     */
     public function alertDeleted(): void
     {
         $this->notification()->error(
@@ -68,7 +56,6 @@ trait AlertHelper
 
     /**
      * @param  string  $errorMessage
-     * @return void
      */
     public function alertError($errorMessage = ''): void
     {
@@ -78,9 +65,6 @@ trait AlertHelper
         );
     }
 
-    /**
-     * @return void
-     */
     public function alertRefresh(): void
     {
         $this->notification()->send([
@@ -92,14 +76,8 @@ trait AlertHelper
     }
 
     /**
-     * @param $title
-     * @param $text
-     * @param $method
-     * @param  array  $params
      * @param  null  $cancelMethod
-     * @param  array  $cancelParams
      * @param  string  $type
-     * @return void
      */
     public function confirm($method, array $params = [], $title = null, $text = null, $cancelMethod = null, array $cancelParams = [], $type = 'question'): void
     {
@@ -122,7 +100,6 @@ trait AlertHelper
     }
 
     /**
-     * @param $method
      * @param  array  $params
      * @param  null  $cancelMethod
      * @param  array  $cancelParams
@@ -148,7 +125,6 @@ trait AlertHelper
     }
 
     /**
-     * @param $method
      * @param  array  $params
      * @param  null  $cancelMethod
      * @param  array  $cancelParams
