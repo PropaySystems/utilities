@@ -178,6 +178,19 @@ use ActivityHelper;
 $thia->log(string $channel, string $description, $preformedOn = null, $causedBy = null, array $properties = []);
 ```
 
+### <u>-- TableHelper Trait --</u>
+This is a helper for the WireUI notifications to easily fire a notification from any livewire class.
+https://v1.wireui.dev/
+```php
+use AlertHelper;
+
+$this->alert($title, $text...);
+$this->alertUpdated();
+$this->alertCreated();
+$this->alertDeleted();
+etc
+```
+
 ### <u>-- Dropdown Schema Trait --</u>
 Use the trait in your database models instead of having to write the boilerplate code multiple times
 ```php
@@ -227,6 +240,13 @@ This will toggle enable or disable triggers in the relevant database table
 use TriggerHelper;
 
 $this->switchDatabaseTrigger($enable = true, $table = null, $trigger = null, string $connection = 'sqlsrv');
+```
+
+### <u>-- TableHelper Trait --</u>
+This is a helper for the livewire powergrid package on for the pagination. 
+https://livewire-powergrid.com/
+```php
+use TableHelper;
 ```
 
 
