@@ -6,9 +6,6 @@ use App\Models\System\SystemPreference;
 
 trait FromEmail
 {
-    /**
-     * @return string
-     */
     public function fromEmail(): string
     {
         $email = config('custom.propay.support_email');
@@ -25,9 +22,6 @@ trait FromEmail
         return $email ?? config('custom.propay.support_email');
     }
 
-    /**
-     * @return string
-     */
     public function fromName(): string
     {
         $name = config('custom.propay.name');
