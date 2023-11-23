@@ -5,6 +5,10 @@ namespace PropaySystems\Utilities\Helpers;
 class NumberHelper
 {
     /**
+     * @param int $min
+     * @param int $max
+     * @param bool $appendTime
+     * @return int
      * @throws \Exception
      */
     public static function randomInt(int $min = 1, int $max = 100000, bool $appendTime = false): int
@@ -18,6 +22,12 @@ class NumberHelper
         return (int) $number;
     }
 
+    /**
+     * @param int $last
+     * @param int $current
+     * @param bool $round
+     * @return array
+     */
     public static function getPercentageDifference(int $last, int $current, bool $round = false): array
     {
         $diff = $current - $last;
@@ -31,6 +41,12 @@ class NumberHelper
         ];
     }
 
+    /**
+     * @param int $number
+     * @param int $precision
+     * @param $divisors
+     * @return int|string
+     */
     public static function numberFormat(int $number, int $precision = 2, $divisors = null): int|string
     {
         // Setup default $divisors if not provided
@@ -64,5 +80,21 @@ class NumberHelper
         }
 
         return number_format($number / $divisor, $precision).$shorthand;
+    }
+
+    /**
+     * @param $prefix
+     * @param $number
+     * @return false|string
+     */
+    public static function combineCellPrefix($prefix, $number): bool|string
+    {
+        $firstChar = mb_substr($number, 0, 1, 'utf-8');
+
+        if ($firstChar == 0) {
+            return $prefix . substr($number, 1);
+        } else {
+            return false;
+        }
     }
 }
