@@ -2,6 +2,10 @@
 
 All notable changes to `utilities` will be documented in this file.
 
+## v1.0.7 - 2023-11-27
+
+Added SaveRelation Trait helper
+
 ## v1.0.6 - 2023-11-27
 
 Fixed DropDownSchema added default value for status and fixed space in translaltion helper
