@@ -17,11 +17,9 @@ trait DropdownSchema
         Schema::create($this->table, function (Blueprint $table) {
             $table->id();
             $table->string('name')->nullable(false)->index()->unique();
-            $table->unsignedInteger('status_id')->default($this->status_default ?? 1)->nullable(false);
+            $table->foreignId('status_id')->default($this->status_default ?? 1)->nullable(false)->constrained();
             $table->timestamps();
             $table->softDeletes();
-
-            $table->foreign('status_id')->references('id')->on('statuses');
         });
     }
 
