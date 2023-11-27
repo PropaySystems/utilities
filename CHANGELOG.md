@@ -2,6 +2,10 @@
 
 All notable changes to `utilities` will be documented in this file.
 
+## v1.0.6 - 2023-11-27
+
+Fixed DropDownSchema added default value for status and fixed space in translaltion helper
+
 ## v1.0.5 - 2023-11-23
 
 Added function to number helper to combine country prefix and cell number if number starts with a 0
