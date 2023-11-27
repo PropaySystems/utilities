@@ -2,6 +2,10 @@
 
 All notable changes to `utilities` will be documented in this file.
 
+## v1.0.5 - 2023-11-23
+
+Added function to number helper to combine country prefix and cell number if number starts with a 0
+
 ## v1.0.4 - 2023-11-20
 
 ### What's Changed
