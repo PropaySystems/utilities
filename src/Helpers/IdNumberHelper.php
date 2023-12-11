@@ -89,7 +89,7 @@ class IdNumberHelper
         $totalMod = ($total % 10);
         $lastDigit = 10 - $totalMod;
 
-        return Str::limit($tempId.$lastDigit, 13);
+        return Str::limit($tempId.$lastDigit, 13, '');
     }
 
     /**
