@@ -2,6 +2,10 @@
 
 All notable changes to `utilities` will be documented in this file.
 
+## v1.0.8 - 2023-11-27
+
+Added proper FK to DropDownSchema
+
 ## v1.0.7 - 2023-11-27
 
 Added SaveRelation Trait helper
