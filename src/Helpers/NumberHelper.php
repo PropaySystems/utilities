@@ -7,13 +7,9 @@ class NumberHelper
     /**
      * @throws \Exception
      */
-    public static function randomInt(int $min = 1, int $max = 100000, bool $appendTime = false): int
+    public static function randomInt(int $min = 1, int $max = 100000): int
     {
-        $number = random_int($min, $max).time();
-
-        if ($appendTime) {
-            $number.time();
-        }
+        $number = random_int($min, $max);
 
         return (int) $number;
     }
