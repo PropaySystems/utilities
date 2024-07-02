@@ -7,7 +7,7 @@ use Illuminate\Support\Facades\DB;
 trait TriggerHelper
 {
     /**
-     * @param $state
+     * @param  $state
      */
     public static function switchDatabaseTrigger($enable = true, $table = null, $trigger = null, string $connection = 'sqlsrv'): void
     {
