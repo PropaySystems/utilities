@@ -2,6 +2,4 @@
 
 namespace PropaySystems\Utilities;
 
-class Utilities
-{
-}
+class Utilities {}

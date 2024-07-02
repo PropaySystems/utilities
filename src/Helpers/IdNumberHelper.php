@@ -8,8 +8,8 @@ use Illuminate\Support\Str;
 class IdNumberHelper
 {
     /**
-     * @param $dateOfBirth 19821208
-     * @param  int  $male 0 or 1
+     * @param  $dateOfBirth  19821208
+     * @param  int  $male  0 or 1
      *
      * @throws \Exception
      */
