@@ -2,6 +2,18 @@
 
 All notable changes to `utilities` will be documented in this file.
 
+## v1.0.11 - 2024-07-02
+
+### What's Changed
+
+* Add disk option on spatie downloader by @mariusdatakrag in https://github.com/PropaySystems/utilities/pull/6
+
+### New Contributors
+
+* @mariusdatakrag made their first contribution in https://github.com/PropaySystems/utilities/pull/6
+
+**Full Changelog**: https://github.com/PropaySystems/utilities/compare/1.0.10...v1.0.11
+
 ## v1.0.10 - 2024-01-16
 
 **Full Changelog**: https://github.com/PropaySystems/utilities/compare/1.0.9...1.0.10
