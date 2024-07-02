@@ -38,7 +38,7 @@ class SpatieMediaHelper
 
     public static function download(Media $media, bool $asFilename = false, $disk = null): StreamedResponse|Media
     {
-        if(!is_null($disk)) {
+        if (! is_null($disk)) {
             return Storage::disk($disk)->download($media->getPath(), ($asFilename) ? $media->name : $media->file_name);
         }
 
