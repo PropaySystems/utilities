@@ -2,6 +2,7 @@
 
 namespace PropaySystems\Utilities\Helpers;
 
+use Illuminate\Support\Facades\Storage;
 use Spatie\MediaLibrary\MediaCollections\Models\Media;
 use Symfony\Component\HttpFoundation\StreamedResponse;
 
@@ -35,10 +36,9 @@ class SpatieMediaHelper
             ->toMediaCollection($collection, $disk);
     }
 
-    public static function download(Media $media, bool $asFilename = false): StreamedResponse|Media
+    public static function download(Media $media, bool $asFilename = false, $disk = null): StreamedResponse|Media
     {
-        return $media;
-        //return Storage::download($media->getPath(), ($asFilename) ? $media->file_name : $media->name);
+        return Storage::disk($disk ?? $media->disk)->download($media->getPath(), ($asFilename) ? $media->name : $media->file_name);
     }
 
     public static function delete(Media $media): ?bool
