@@ -217,4 +217,12 @@ class IdNumberHelper
 
         return ($total * 9) % 10;
     }
+
+    public static function getBirthdayFromIdNumber($idNumber): int
+    {
+        $birthday = self::getBirthDate($idNumber);
+        $currentDate = Carbon::now();
+
+        return $currentDate->diffInYears($birthday);
+    }
 }
