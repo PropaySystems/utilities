@@ -32,3 +32,9 @@ it('can format a number to more human-readable without precision', function () {
 
     expect($value)->toBe('100K');
 });
+
+it('can add cell number prefix to a number', function () {
+    $value = NumberHelper::combineCellPrefix('27', '0821231234');
+
+    expect($value)->toBe('27821231234');
+});

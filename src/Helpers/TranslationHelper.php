@@ -19,6 +19,6 @@ class TranslationHelper
      */
     public static function translate(string $value, string $fileName, string $character = '_')
     {
-        return Lang::has(config('utilities.translation_helper.path').DIRECTORY_SEPARATOR.$fileName.' . '.Str::slug($value, $character)) ? __(config('utilities.translation_helper.path').DIRECTORY_SEPARATOR.$fileName.'.'.Str::slug($value, $character)) : $value;
+        return Lang::has(config('utilities.translation_helper.path').DIRECTORY_SEPARATOR.$fileName.'.'.Str::slug($value, $character)) ? __(config('utilities.translation_helper.path').DIRECTORY_SEPARATOR.$fileName.'.'.Str::slug($value, $character)) : $value;
     }
 }

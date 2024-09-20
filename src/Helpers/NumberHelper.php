@@ -7,13 +7,9 @@ class NumberHelper
     /**
      * @throws \Exception
      */
-    public static function randomInt(int $min = 1, int $max = 100000, bool $appendTime = false): int
+    public static function randomInt(int $min = 1, int $max = 100000): int
     {
-        $number = random_int($min, $max).time();
-
-        if ($appendTime) {
-            $number.time();
-        }
+        $number = random_int($min, $max);
 
         return (int) $number;
     }
@@ -64,5 +60,19 @@ class NumberHelper
         }
 
         return number_format($number / $divisor, $precision).$shorthand;
+    }
+
+    /**
+     * @return false|string
+     */
+    public static function combineCellPrefix($prefix, $number): bool|string
+    {
+        $firstChar = mb_substr($number, 0, 1, 'utf-8');
+
+        if ($firstChar == 0) {
+            return $prefix.substr($number, 1);
+        } else {
+            return false;
+        }
     }
 }
