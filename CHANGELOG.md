@@ -2,6 +2,20 @@
 
 All notable changes to `utilities` will be documented in this file.
 
+## v1.0.12 - 2024-09-25
+
+### What's Changed
+
+* Cleaned up unit tests by @MickProPay in https://github.com/PropaySystems/utilities/pull/1
+* Full date birthday calculation by @JCDuvenage in https://github.com/PropaySystems/utilities/pull/7
+
+### New Contributors
+
+* @MickProPay made their first contribution in https://github.com/PropaySystems/utilities/pull/1
+* @JCDuvenage made their first contribution in https://github.com/PropaySystems/utilities/pull/7
+
+**Full Changelog**: https://github.com/PropaySystems/utilities/compare/v1.0.11...v1.0.12
+
 ## v1.0.11 - 2024-07-02
 
 ### What's Changed
