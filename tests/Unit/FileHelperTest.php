@@ -1,25 +1,37 @@
 <?php
 
-it('can format bytes to KB human-readable format', function () {
-    $value = \PropaySystems\Utilities\Helpers\FileHelper::formatBytes('50000');
+use PropaySystems\Utilities\Helpers\FileHelper;
 
-    expect($value)->toBe('48.83 KB');
-});
+dataset('file_sizes', [
 
-it('can format bytes to MB human-readable format', function () {
-    $value = \PropaySystems\Utilities\Helpers\FileHelper::formatBytes('5000000');
+    'KB' => [
+        'input' => '50000',
+        'expected' => '48.83 KB',
+    ],
 
-    expect($value)->toBe('4.77 MB');
-});
+    'MB' => [
+        'input' => '5000000',
+        'expected' => '4.77 MB',
+    ],
 
-it('can format bytes to GB human-readable format', function () {
-    $value = \PropaySystems\Utilities\Helpers\FileHelper::formatBytes('5000000000');
+    'GB' => [
+        'input' => '5000000000',
+        'expected' => '4.66 GB',
+    ],
 
-    expect($value)->toBe('4.66 GB');
-});
+    'TB' => [
+        'input' => '10000000000000',
+        'expected' => '9.09 TB',
+    ],
 
-it('can format bytes to TB human-readable format', function () {
-    $value = \PropaySystems\Utilities\Helpers\FileHelper::formatBytes('10000000000000');
+]);
 
-    expect($value)->toBe('9.09 TB');
-});
+it('can format human-readable file sizes', function (string $input, string $expected) {
+
+    expect(
+        FileHelper::formatBytes($input)
+    )->toBe(
+        $expected
+    );
+
+})->with('file_sizes');

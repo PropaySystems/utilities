@@ -11,8 +11,8 @@ it('can generate a random number', function () {
 it('can generate percentage difference', function () {
     $value = NumberHelper::getPercentageDifference(200, 100);
 
-    expect($value['percentage'])->toBe((float) '50.0');
-    expect($value['direction'])->toBe('+');
+    expect($value['percentage'])->toBe((float) '50.0')
+        ->and($value['direction'])->toBe('+');
 });
 
 it('can generate percentage difference rounded', function () {

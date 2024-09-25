@@ -46,7 +46,7 @@ class IdNumberHelper
         $maxYear = 99;
         $year = rand($minYear, $maxYear);
 
-        $now = new Carbon();
+        $now = new Carbon;
 
         $minGender = 0000;
         $maxGender = 9999;
@@ -214,5 +214,13 @@ class IdNumberHelper
         }
 
         return ($total * 9) % 10;
+    }
+
+    public static function getBirthdayFromIdNumber($idNumber): int
+    {
+        $birthday = self::getBirthDate($idNumber);
+        $currentDate = Carbon::now();
+
+        return $currentDate->diffInYears($birthday);
     }
 }
