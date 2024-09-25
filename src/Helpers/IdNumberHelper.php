@@ -8,8 +8,8 @@ use Illuminate\Support\Str;
 class IdNumberHelper
 {
     /**
-     * @param $dateOfBirth 19821208
-     * @param  int  $male 0 or 1
+     * @param  $dateOfBirth  19821208
+     * @param  int  $male  0 or 1
      *
      * @throws \Exception
      */
@@ -46,7 +46,7 @@ class IdNumberHelper
         $maxYear = 99;
         $year = rand($minYear, $maxYear);
 
-        $now = new Carbon();
+        $now = new Carbon;
 
         $minGender = 0000;
         $maxGender = 9999;
@@ -86,7 +86,7 @@ class IdNumberHelper
         $totalMod = ($total % 10);
         $lastDigit = 10 - $totalMod;
 
-        return Str::limit($tempId.$lastDigit, 13);
+        return Str::limit($tempId.$lastDigit, 13, '');
     }
 
     public static function generateDateOfBirth(): string
@@ -99,9 +99,9 @@ class IdNumberHelper
         );
     }
 
-    public static function getGenderCode($idNumber): string
+    public static function getGenderCode($idNumber): int
     {
-        return (substr($idNumber, 6, 4) < 5000) ? 'female' : 'male';
+        return (substr($idNumber, 6, 4) < 5000) ? config('utilities.gender.female') : config('utilities.gender.male');
     }
 
     public static function getBirthDate($idNumber): string
@@ -111,8 +111,6 @@ class IdNumberHelper
         $birthYear = substr($idNumber, 0, 2);
         if ($birthYear < date('y')) {
             $default_century = '20';
-        } else {
-            $default_century = '19';
         }
 
         $year = $default_century.substr($idNumber, 0, 2);
@@ -216,5 +214,13 @@ class IdNumberHelper
         }
 
         return ($total * 9) % 10;
+    }
+
+    public static function getBirthdayFromIdNumber($idNumber): int
+    {
+        $birthday = self::getBirthDate($idNumber);
+        $currentDate = Carbon::now();
+
+        return $currentDate->diffInYears($birthday);
     }
 }

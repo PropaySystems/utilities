@@ -115,6 +115,10 @@ This will format the number accordingly 100000 will become 100.00k
 ```php
 NumberHelper::numberFormat(int $number);
 ```
+This will combine a country prefix ex: 27 with the cell number ex: 0821231234 and return 27821231234
+```php
+NumberHelper::combineCellPrefix($prefix, $number)
+```
 
 ### <u>-- Route Helper --</u>
 Check of the string is in the current route name
