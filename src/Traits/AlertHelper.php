@@ -2,11 +2,11 @@
 
 namespace PropaySystems\Utilities\Traits;
 
-use WireUi\Traits\Actions;
+use WireUi\Traits\WireUiActions;
 
 trait AlertHelper
 {
-    use Actions;
+    use WireUiActions;
 
     /**
      * @param  null  $text
