@@ -221,6 +221,6 @@ class IdNumberHelper
         $birthday = self::getBirthDate($idNumber);
         $currentDate = Carbon::now();
 
-        return $currentDate->diffInYears($birthday);
+        return abs($currentDate->diffInYears($birthday));
     }
 }
