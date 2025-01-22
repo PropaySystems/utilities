@@ -16,7 +16,7 @@ trait SaveRelations
     public function saveBelongsTo($model, $relations = [])
     {
 
-        //check if not empty
+        // check if not empty
         if (! empty($relations)) {
             foreach ($relations as $relation => $value) {
                 $method = str_replace('_id', '', $relation);
@@ -40,7 +40,7 @@ trait SaveRelations
      */
     public function sync($model, $relations = [])
     {
-        //check if not empty
+        // check if not empty
         if (! empty($relations)) {
             foreach ($relations as $relation => $value) {
                 if (! empty($value)) {
