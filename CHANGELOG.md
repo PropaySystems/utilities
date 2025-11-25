@@ -2,6 +2,10 @@
 
 All notable changes to `utilities` will be documented in this file.
 
+## v1.0.15 - 2025-11-25
+
+**Full Changelog**: https://github.com/PropaySystems/utilities/compare/v1.0.14...1.0.15
+
 ## v1.0.14 - 2024-12-04
 
 **Full Changelog**: https://github.com/PropaySystems/utilities/compare/v1.0.13...v1.0.14
