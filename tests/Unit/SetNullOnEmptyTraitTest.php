@@ -1,6 +1,8 @@
 <?php
 
-uses(\PropaySystems\Utilities\Traits\SetNullOnEmpty::class);
+use PropaySystems\Utilities\Traits\SetNullOnEmpty;
+
+uses(SetNullOnEmpty::class);
 
 it('set the value to null when variable is empty', function () {
     $input = '';
