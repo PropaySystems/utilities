@@ -178,10 +178,10 @@ class IdNumberHelper
 
         $c = 0;
 
-        do {
+        while ($b > 0) {
             $c += $b % 10;
-            $b /= 10;
-        } while ($b > 0);
+            $b = intdiv($b, 10);
+        }
 
         $c += $a;
         $d = 10 - ($c % 10);
@@ -218,9 +218,6 @@ class IdNumberHelper
 
     public static function getBirthdayFromIdNumber($idNumber): int
     {
-        $birthday = self::getBirthDate($idNumber);
-        $currentDate = Carbon::now();
-
-        return $currentDate->diffInYears($birthday);
+        return Carbon::parse(self::getBirthDate($idNumber))->age;
     }
 }
