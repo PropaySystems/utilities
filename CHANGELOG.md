@@ -2,6 +2,14 @@
 
 All notable changes to `utilities` will be documented in this file.
 
+## v1.0.17 - 2026-06-17
+
+### What's Changed
+
+* Fix ID validation calculation and simplify age retrieval by @mariusdatakrag in https://github.com/PropaySystems/utilities/pull/10
+
+**Full Changelog**: https://github.com/PropaySystems/utilities/compare/1.0.16...v1.0.17
+
 ## v1.0.16 - 2025-11-25
 
 **Full Changelog**: https://github.com/PropaySystems/utilities/compare/1.0.15...1.0.16
