@@ -11,8 +11,8 @@ A set of helper utilities and traits to common functions we use everyday and acr
 
 ## Requirements
 
-PHP 8.1+  
-Laravel 9+  
+PHP 8.2+  
+Laravel 10–13  
 
 ## Installation
 

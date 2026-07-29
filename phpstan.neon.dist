@@ -10,7 +10,11 @@ parameters:
     tmpDir: build/phpstan
     checkOctaneCompatibility: true
     checkModelProperties: true
-    checkMissingIterableValueType: false
+    configDirectories:
+        - config
+    ignoreErrors:
+        -
+            identifier: trait.unused
     excludePaths:
             - 'src/Helpers/BaseModalComponent.php'
             - 'src/Helpers/Logo.php'
