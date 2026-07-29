@@ -2,6 +2,14 @@
 
 All notable changes to `utilities` will be documented in this file.
 
+## v1.0.18 - 2026-07-29
+
+### What's Changed
+
+* Add Laravel 13 support and drop Laravel 9 by @mariusdatakrag in https://github.com/PropaySystems/utilities/pull/11
+
+**Full Changelog**: https://github.com/PropaySystems/utilities/compare/v1.0.17...v1.0.18
+
 ## Unreleased
 
 ### What's Changed
