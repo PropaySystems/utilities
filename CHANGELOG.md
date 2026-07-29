@@ -2,6 +2,13 @@
 
 All notable changes to `utilities` will be documented in this file.
 
+## Unreleased
+
+### What's Changed
+
+* Add Laravel 13 support and drop Laravel 9
+* Bump Spatie package-tools, Pest, and Testbench for Laravel 13 compatibility
+
 ## v1.0.17 - 2026-06-17
 
 ### What's Changed
